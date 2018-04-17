@@ -1,0 +1,26 @@
+{
+  "name": "newsletterwebapp",
+  "version": "1.0.0",
+  "description": "This is a great newsletter web app build using node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navneetjuneja26/NewsLetterWebApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/navneetjuneja26/NewsLetterWebApp/issues"
+  },
+  "homepage": "https://github.com/navneetjuneja26/NewsLetterWebApp#readme",
+  "dependencies": {
+    "async": "^2.6.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "request": "^2.85.0"
+  }
+}
