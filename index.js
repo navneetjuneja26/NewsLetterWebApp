@@ -33,26 +33,20 @@ app.use(flash());
 //https://us18.api.mailchimp.com/3.0/ list/91e676a323/members 
 
 app.route('/')
-.get((req,res,next)=>
-{
-    res.render('main/home', {message : req.flash('success')});
-})
+.get((req,res,next)=> res.render('main/home', {message : req.flash('success')}))
 .post((req,res,next)=>{ 
     request({
         url:'https://us18.api.mailchimp.com/3.0/lists/91e676a323/members',
         method: 'POST',
         headers:{
             'Authorization': 'randomUser e41034809630e5fab3409a46ab22d277-us18',
-        
-            'Content-Type' : 'aplication/json'
+            'Content-Type' : 'application/json'
         },
-
         json:
         {
             'email_address': req.body.email ,
             'status' : 'subscribed'
         }
-
     },function(err,response,body)
 {
     if(err)
@@ -61,7 +55,7 @@ app.route('/')
     }
     else{
       req.flash('success','You Have Submitted your email ')
-     res.redirect('/');    
+      res.redirect('/');    
     }
 });
 });
