@@ -12,6 +12,12 @@ const app = express();
 /*@desc(Add the required modules)*/
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended :  false}));
+app.use(morgan('dev'));
+
+/* @endpoint = '/' */ 
+/* @desc(GET request to the HOME route)*/
+app.get('/',(req, res, next) => res.json('Hello Home'));
+
 
 /*@desc(Make the incoming request hit the server at random port)*/
 const port = process.env.PORT || Math.floor(Math.random()*10000) + 1;
